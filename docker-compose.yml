@@ -23,6 +23,7 @@ services:
       - mongodb
     environment:
       - MONGO_URL=mongodb://mongodb:27017/reverse_todo
+    image : nourheneliheouel/integration-app
     networks:
       - app-network
 
@@ -38,6 +39,8 @@ services:
       - "3000:5000"
     depends_on:
       - backend
+    image : nourheneliheouel/integration-app
+
     networks:
       - app-network
 
